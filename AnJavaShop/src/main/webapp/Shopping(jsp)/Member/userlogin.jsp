@@ -14,7 +14,7 @@
 <body>
 <!--header section starts-->
 <header class="header">
-    <a href="/src/main/webapp/Shopping/Index/index.html" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 </header>
 
 <div class="wrapper">
