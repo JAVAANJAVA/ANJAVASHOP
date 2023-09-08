@@ -55,7 +55,7 @@
             <h3>JAVAANJAVA<i class='bx bxs-shopping-bags'></i></h3>
         </div>
             <div class="share">
-                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="https://github.com/JAVAANJAVA/ANJAVASHOP"><i class='bx bxl-github'></i></a>
                 <a href="#"><i class='bx bxl-instagram'></i></a>
                 <a href="#"><i class='bx bxl-twitter'></i></a>
                 <a href="#"><i class='bx bxl-facebook'></i></a>
