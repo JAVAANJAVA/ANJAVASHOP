@@ -15,7 +15,7 @@
 <!--header section starts-->
 
 <header class="header">
-    <a href="index.html" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
     
     <nav class="navbar">
         <ul>
@@ -33,8 +33,8 @@
     <div class="icons">
         <div class="bx bx-menu" id="menu-btn"></div>
         <div class="bx bx-search" id="search-btn"></div>
-        <a href="/src/main/webapp/Shopping(html)/Member/userinfo.insert.html"><div class="bx bx-group" id="cart-btn"></div></a>
-        <a href="/src/main/webapp/Shopping(html)/Member/userlogin.html"><div class="bx bx-log-in" id="login-btn"></div></a>
+        <a href="/Shopping(jsp)/Member/userinfo_insert.do"><div class="bx bx-group" id="cart-btn"></div></a>
+        <a href="/Shopping(jsp)/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
     </div>
 
     <form name="search" method="post" action="" class="search-form">
