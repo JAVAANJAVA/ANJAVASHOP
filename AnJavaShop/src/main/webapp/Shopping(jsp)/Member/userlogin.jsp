@@ -14,21 +14,21 @@
 <body>
 <!--header section starts-->
 <header class="header">
-    <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="/src/main/webapp/Shopping/Index/index.html" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 </header>
 
 <div class="wrapper">
     <div class="form-box login">
         <h1>Login</h1>
-        <form name="login" method="post" action="" >
+        <form name="login" method="post" action="/Shopping(jsp)/Member/userlogin.do" >
         
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-user' ></i></span>
-                <input type="text" placeholder="Your Id" required>   
+                <input type="text" name ="id" placeholder="Your Id" required>   
             </div>
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                <input type="password" placeholder="Your Password" required>
+                <input type="password" name ="password" placeholder="Your Password" required>
                 
             </div> 
             <div class="remember-forgot">
