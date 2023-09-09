@@ -1,28 +1,29 @@
 CREATE TABLE tbl_members (
-  idx NUMBER NOT NULL, -- È¸¿ø¹øÈ£ 
-  username VARCHAR2(50) NOT NULL, -- È¸¿ø¾ÆÀÌµğ (Áßº¹°Ë»ç ÇÊ¿ä)
-  pass VARCHAR2(100) NOT NULL, -- ºñ¹Ğ¹øÈ£
-  zipcode VARCHAR2(10), -- ¿ìÆí¹øÈ£
-  address VARCHAR2(255), -- ÁÖ¼Ò (ÀÚµ¿ÀÔ·Â - ¿ìÆí¹øÈ£¿¡ µû¶ó)
-  de_address VARCHAR2(255), -- »ó¼¼ÁÖ¼Ò
+  idx NUMBER NOT NULL, -- íšŒì›ë²ˆí˜¸ 
+  userid VARCHAR2(255) NOT NULL, -- íšŒì› ì´ë¦„
+  username VARCHAR2(50) NOT NULL, -- íšŒì›ì•„ì´ë”” (ì¤‘ë³µê²€ì‚¬ í•„ìš”)
+  pass VARCHAR2(100) NOT NULL, -- ë¹„ë°€ë²ˆí˜¸
+  zipcode VARCHAR2(10), -- ìš°í¸ë²ˆí˜¸
+  address VARCHAR2(255), -- ì£¼ì†Œ (ìë™ì…ë ¥ - ìš°í¸ë²ˆí˜¸ì— ë”°ë¼)
+  de_address VARCHAR2(255), -- ìƒì„¸ì£¼ì†Œ
 
   PRIMARY KEY (idx),
-  UNIQUE (username) -- È¸¿ø¾ÆÀÌµğ Áßº¹ °Ë»ç¿ë UNIQUE Á¦¾àÁ¶°Ç
+  UNIQUE (username) -- íšŒì›ì•„ì´ë”” ì¤‘ë³µ ê²€ì‚¬ìš© UNIQUE ì œì•½ì¡°ê±´
 );
 
 CREATE SEQUENCE tbl_members_seq_idx;
 
 
 CREATE TABLE tbl_products (
-  idx NUMBER NOT NULL, -- »óÇ°¹øÈ£ (ÀÚµ¿ÀÔ·Â)
-  seller VARCHAR2(50) NOT NULL,               -- ÆÇ¸ÅÀÚ
-  product_name VARCHAR2(255) NOT NULL,       -- »óÇ°ÀÌ¸§
-  contents VARCHAR2(2000),                -- »óÇ°¼³¸í
-  price NUMBER(10, 2) NOT NULL,              -- »óÇ°°¡°İ ¼Ò¼öÁ¡ µÎ¹ø¤Š±îÁö
-  creation_date DATE DEFAULT SYSDATE,        -- ÀÛ¼ºÀÏÀÚ (±âº»°ª: ÇöÀç ³¯Â¥)
-  readcnt NUMBER(5) DEFAULT 0,            -- Á¶È¸¼ö (±âº»°ª: 0)
-  file_path VARCHAR2(255),                  -- ÆÄÀÏ °æ·Î
-  pass VARCHAR2(50),                    -- ºñ¹Ğ¹øÈ£
+  idx NUMBER NOT NULL, -- ìƒí’ˆë²ˆí˜¸ (ìë™ì…ë ¥)
+  seller VARCHAR2(50) NOT NULL,               -- íŒë§¤ì
+  product_name VARCHAR2(255) NOT NULL,       -- ìƒí’ˆì´ë¦„
+  contents VARCHAR2(2000),                -- ìƒí’ˆì„¤ëª…
+  price NUMBER(10, 2) NOT NULL,              -- ìƒí’ˆê°€ê²© ì†Œìˆ˜ì  ë‘ë²ˆÂŠê¹Œì§€
+  creation_date DATE DEFAULT SYSDATE,        -- ì‘ì„±ì¼ì (ê¸°ë³¸ê°’: í˜„ì¬ ë‚ ì§œ)
+  readcnt NUMBER(5) DEFAULT 0,            -- ì¡°íšŒìˆ˜ (ê¸°ë³¸ê°’: 0)
+  file_path VARCHAR2(255),                  -- íŒŒì¼ ê²½ë¡œ
+  pass VARCHAR2(50),                    -- ë¹„ë°€ë²ˆí˜¸
 
   PRIMARY KEY (idx)
 );
@@ -32,19 +33,19 @@ CREATE SEQUENCE tbl_products_seq_idx;
 
 
 CREATE TABLE askreply (
-  idx number NOT NULL ,                    --  °íÀ¯¹øÈ£
-  pass varchar2(20) NOT NULL ,                --  ºñ¹Ğ¹øÈ£
-  name varchar2(20) NOT NULL ,                --  ÀÛ¼ºÀÚ ÀÌ¸§
-  regdate date default sysdate,                --  ÀÛ¼ºÀÏÀÚ
-  subject varchar2(100) NOT NULL,            --  Á¦¸ñ
-  contents varchar2(2000) NOT NULL,            --  ³»¿ë
-  parent number(2) not null,                --  ÃÖ»óÀ§ ºÎ¸ğ±Û¹øÈ£
-  realparent number(2) not null,            --  ¹Ù·Î ÇÑ¼öÁØ À§ÀÇ ±Û¹øÈ£
-  indent number(2) not null,                --  µé¿©¾²±â ±âÁØ
-  depth number(2) not null,                --  ´äº¯±ÛÀÇ ³Ñ¹ö¸¦ ÀúÀåÇÏ´Â ÇÊµå·Î 
-                            --  Ã¹¹øÂ° ´äº¯±ÛÀº 1, µÎ ¹øÂ° ´äº¯±ÛÀº 2,
-                            --  n¹øÂ° ´äº¯±ÛÀº nÀÇ °ªÀÌ ÀúÀå
-  readcnt number default 0 ,                --  Á¶È¸¼ö
+  idx number NOT NULL ,                    --  ê³ ìœ ë²ˆí˜¸
+  pass varchar2(20) NOT NULL ,                --  ë¹„ë°€ë²ˆí˜¸
+  name varchar2(20) NOT NULL ,                --  ì‘ì„±ì ì´ë¦„
+  regdate date default sysdate,                --  ì‘ì„±ì¼ì
+  subject varchar2(100) NOT NULL,            --  ì œëª©
+  contents varchar2(2000) NOT NULL,            --  ë‚´ìš©
+  parent number(2) not null,                --  ìµœìƒìœ„ ë¶€ëª¨ê¸€ë²ˆí˜¸
+  realparent number(2) not null,            --  ë°”ë¡œ í•œìˆ˜ì¤€ ìœ„ì˜ ê¸€ë²ˆí˜¸
+  indent number(2) not null,                --  ë“¤ì—¬ì“°ê¸° ê¸°ì¤€
+  depth number(2) not null,                --  ë‹µë³€ê¸€ì˜ ë„˜ë²„ë¥¼ ì €ì¥í•˜ëŠ” í•„ë“œë¡œ 
+                            --  ì²«ë²ˆì§¸ ë‹µë³€ê¸€ì€ 1, ë‘ ë²ˆì§¸ ë‹µë³€ê¸€ì€ 2,
+                            --  në²ˆì§¸ ë‹µë³€ê¸€ì€ nì˜ ê°’ì´ ì €ì¥
+  readcnt number default 0 ,                --  ì¡°íšŒìˆ˜
   PRIMARY KEY  (idx)
 );
 
