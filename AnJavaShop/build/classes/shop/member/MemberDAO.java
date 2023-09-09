@@ -17,27 +17,6 @@ public class MemberDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
-	
-	//ID 중복 검사 메소드
-	public int memberIDcheck(String username){
-
-		String query="select count(*) as counter  from tbl_members where username=?";
-		int row=0;//리턴타입
-		try {
-			conn = DBManager.getConnection();
-			pstmt = conn.prepareStatement(query);
-			pstmt.setString(1, username);
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				row = rs.getInt(1); //row = rs.getInt("counter");
-			}
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			DBManager.close(conn, pstmt,rs);
-		}
-		return row;
-	}
 
 		public int memberLogin(String userid, String passwd)  {
 			
