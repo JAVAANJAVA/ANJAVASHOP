@@ -1,7 +1,7 @@
 CREATE TABLE tbl_members (
   idx NUMBER NOT NULL, -- 회원번호 
-  userid VARCHAR2(255) NOT NULL, -- 회원 이름
-  username VARCHAR2(50) NOT NULL, -- 회원아이디 (중복검사 필요)
+  username VARCHAR2(255) NOT NULL, -- 회원 이름
+  userid VARCHAR2(50) NOT NULL, -- 회원아이디 (중복검사 필요)
   pass VARCHAR2(100) NOT NULL, -- 비밀번호
   zipcode VARCHAR2(10), -- 우편번호
   address VARCHAR2(255), -- 주소 (자동입력 - 우편번호에 따라)
