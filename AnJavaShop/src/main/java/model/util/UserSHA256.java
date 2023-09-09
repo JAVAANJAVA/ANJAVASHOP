@@ -1,4 +1,4 @@
-package model.util;
+package shop.util;
 
 import java.security.MessageDigest;
 
