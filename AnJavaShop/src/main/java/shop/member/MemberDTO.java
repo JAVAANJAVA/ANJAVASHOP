@@ -2,16 +2,23 @@ package shop.member;
 
 public class MemberDTO {
 	private int idx;//고유번호
-	private String username; // 회원 아이디
-    private String pass; // 비밀번호
-    private String zipcode; // 우편번호
-    private String address; // 주소
-    private String de_address; // 상세주소
-    public int getIdx() {
+	private String username; //회원 이름
+	private String userid; // 회원 아이디
+	private String pass; // 비밀번호
+    	private String zipcode; // 우편번호
+    	private String address; // 주소
+    	private String de_address; // 상세주소
+    	public int getIdx() {
 		return idx;
 	}
 	public void setIdx(int idx) {
 		this.idx = idx;
+	}
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 	public String getUsername() {
 		return username;
