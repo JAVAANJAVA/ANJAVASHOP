@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.util.UserSHA256;
+import shop.util.UserSHA256;
 import shop.member.MemberDAO;
 import shop.member.MemberDTO;
 
@@ -44,8 +44,9 @@ public class MemberInsertServlet extends HttpServlet {
 		MemberDAO dao = MemberDAO.getInstance();
 		MemberDTO dto = new MemberDTO();
 		
-		dto.setUsername(request.getParameter("id"));
-		dto.setPass(UserSHA256.getSHA256(request.getParameter("passwd")));
+		dto.setUserid(request.getParameter("userid"));
+		dto.setUsername(request.getParameter("username"));
+		dto.setPass(UserSHA256.getSHA256(request.getParameter("password")));
 		dto.setZipcode(request.getParameter("zipcode"));
 		dto.setAddress(request.getParameter("address"));
 		dto.setDe_address(request.getParameter("detailaddress"));

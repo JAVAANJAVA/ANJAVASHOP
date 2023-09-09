@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.util.UserSHA256;
+import shop.util.UserSHA256;
 import shop.member.MemberDAO;
 import shop.member.MemberDTO;
 
@@ -41,25 +41,20 @@ public class MemberLoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberDAO dao = MemberDAO.getInstance();
-		String userid = request.getParameter("id");
-		String password = request.getParameter("password");
-		//String password = UserSHA256.getSHA256(request.getParameter("password"));
+		String userid = request.getParameter("userid");
+		String password = UserSHA256.getSHA256(request.getParameter("password"));
 		
-		int row = dao.memberLogin(userid, password);
-		System.out.println(row);
+		int row = dao.MemberLogin(userid, password);
 		if(row==1) {//세션객체 생성
-			MemberDTO member = dao.memberSelect(userid);
+			MemberDTO member = dao.MemberSelect(userid);
 			HttpSession session = request.getSession();
-			session.setAttribute("user", userid);
-			//session.setAttribute("user", member);
+			session.setAttribute("userinfo", member);
 			session.setMaxInactiveInterval(1800);//30분
-			
 		}
 		request.setAttribute("row", row);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/Shopping(jsp)/Index/index.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("userlogin_pro.jsp");
 		rd.forward(request, response);
-		
 	}
 
 }

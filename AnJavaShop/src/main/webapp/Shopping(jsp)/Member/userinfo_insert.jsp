@@ -17,27 +17,32 @@
     <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 <script>
 	function send(){
-		if(register.id.value==""){
+		if(register.userid.value==""){
 			alert("아이디를 입력해주세요");
-			register.id.focus();
+			register.userid.focus();
 			return;
-		}else if(!checkEngNum(register.id.value)){
+		}else if(!checkEngNum(register.userid.value)){
 			alert("아이디는 영문, 숫자만 입력가능합니다");
-			register.id.focuse();
+			register.userid.focus();
 			return;
 		}
-		if(register.passwd.value==""){
+		if(register.username.value==""){
+			alert("이름을 입력해주세요");
+			register.username.focus();
+			return;
+		}
+		if(register.password.value==""){
 			alert("비밀번호를 입력해주세요");
-			register.passwd.focus();
+			register.password.focus();
 			return;
-		}else if(!checkEngNum(register.passwd.value)){
+		}else if(!checkEngNum(register.password.value)){
 			alert("비밀번호는 영문, 숫자만 입력가능합니다");
-			register.passwd.focuse();
+			register.password.focus();
 			return;
 		}
-		if(register.passwd.value!=register.repasswd.value){
+		if(register.password.value!=register.repassword.value){
 			alert("비밀번호가 일치하지 않습니다");
-			register.repasswd.focus();
+			register.repassword.focus();
 			return;
 		}
 		if(register.zipcode.value==""){
@@ -81,15 +86,19 @@
         <form name="register" method="post" action="/Shopping(jsp)/Member/userinfo_insert.do" >
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-user' ></i></span>
-                <input name="id" type="text" placeholder="UserName" value="" required>   
+                <input name="userid" type="text" placeholder="UserId" value="" required>   
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class='bx bxs-user' ></i></span>
+                <input name="username" type="text" placeholder="UserName" value="" required>   
             </div>
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                <input name="passwd" type="password" placeholder="Password" value="" required>
+                <input name="password" type="password" placeholder="Password" value="" required>
             </div>
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-lock'></i></span>
-                <input name="repasswd" type="password" placeholder="Re Password" value="" required>
+                <input name="repassword" type="password" placeholder="Re Password" value="" required>
             </div> 
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-envelope' ></i></span>
