@@ -42,7 +42,7 @@
         	<a href="/Shopping(jsp)/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
         <%}else{%>
         	<a href="#"><%=dto.getUsername()%>님</a>&nbsp;
-        	<a href="/Shopping(jsp)/Member/userlogout.do">로그아웃</a>
+        	<a href="/Shopping(jsp)/Member/userlogout.do"><div class="bx bx-log-out" id="login-btn"></div></a>
         <%}%>
     </div>
 
