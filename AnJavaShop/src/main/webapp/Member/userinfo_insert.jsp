@@ -45,7 +45,11 @@
 			register.username.focus();
 			return;
 		}
-		
+		if(register.zipcode.value==""){
+			alert("우편번호를 입력해주세요");
+			register.zipcode.focus();
+			return;
+		}
 		if(register.address.value==""){
 			alert("주소를 입력해주세요");
 			register.address.focus();
