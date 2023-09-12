@@ -96,4 +96,26 @@ public class MemberDAO {
 		}
 		return dto;
 	}
+
+	public boolean isAlreadyExistsUserId(String userId) {
+		boolean isExists = false;
+		String query = "select count(*) from tbl_members where userid = ?";
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, userId);		
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				if(rs.getInt(1) != 0) {
+					isExists = true;
+				}
+			}
+		} catch(Exception e)	{
+			e.printStackTrace();
+		} finally	{
+			DBManager.close(conn, pstmt,rs);
+		}
+		return isExists;
+	}
 }

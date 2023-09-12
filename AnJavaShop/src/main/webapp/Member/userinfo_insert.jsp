@@ -16,6 +16,8 @@
 <header class="header">
     <a href="/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 <script>
+	let validLoginId = '';
+
 	function send(){
 		if(register.userid.value==""){
 			alert("아이디를 입력해주세요");
@@ -23,6 +25,12 @@
 			return;
 		}else if(!checkEngNum(register.userid.value)){
 			alert("아이디는 영문, 숫자만 입력가능합니다");
+			register.userid.focus();
+			return;
+		}
+		if(register.userid.value != validLoginId.value) {
+			alert("해당 아이디는 중복된 아이디입니다");
+			register.userid.value = '';
 			register.userid.focus();
 			return;
 		}
@@ -43,11 +51,6 @@
 		if(register.username.value==""){
 			alert("이름을 입력해주세요");
 			register.username.focus();
-			return;
-		}
-		if(register.zipcode.value==""){
-			alert("우편번호를 입력해주세요");
-			register.zipcode.focus();
 			return;
 		}
 		if(register.address.value==""){
@@ -78,6 +81,39 @@
 			return 1;
 		}
 	}
+
+	function loginIdDupChk(el) {
+	    let loginIdChkMsg = document.getElementById('loginIdChkMsg');
+
+	    while (loginIdChkMsg.firstChild) {
+	        loginIdChkMsg.removeChild(loginIdChkMsg.firstChild);
+	    }
+
+	    el.value = el.value.trim();
+
+	    let xhr = new XMLHttpRequest();
+	    xhr.open('GET', 'loginIdDupChk.do?userId=' + el.value, true);
+
+	    xhr.onreadystatechange = function () {
+	        if (xhr.readyState === 4 && xhr.status === 200) {
+	            let data = JSON.parse(xhr.responseText);
+	            if (data.success) {
+	                let message = document.createElement('span');
+	                message.textContent = '해당 아이디는 사용 가능한 아이디입니다.';
+	                loginIdChkMsg.appendChild(message);
+	                validLoginId = document.getElementsByName('userid')[0];
+	            } else {
+	                let message = document.createElement('span');
+	                message.textContent = '해당 아이디는 중복된 아이디입니다.';
+	                loginIdChkMsg.appendChild(message);
+	                validLoginId = '';
+	            }
+	        }
+	    };
+
+	    xhr.send();
+	}
+
 	
 	function passCheck(){
 		var correctColor1 = "#009000";
@@ -117,7 +153,7 @@
         <form name="register" method="post" action="/Member/userinfo_insert.do" >
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-user' ></i></span>
-                <input name="userid" type="text" placeholder="UserId" value="" required >
+                <input name="userid" type="text" placeholder="UserId" value="" required onblur="loginIdDupChk(this)" >
                 <div id="loginIdChkMsg"></div>   
             </div>
             <div class="input-box">
