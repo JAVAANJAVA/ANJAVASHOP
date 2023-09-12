@@ -19,11 +19,11 @@
 <!--header section starts-->
 
 <header class="header">
-    <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
     
     <nav class="navbar">
         <ul>
-          <li><a href="/Shopping(jsp)/Index/index.jsp">home</a></li>
+          <li><a href="/Index/index.jsp">home</a></li>
           <li><a href="#">categories</a>
                 <ul >
                     <li><a href="#">beta</a></li>
@@ -38,12 +38,12 @@
         <div class="bx bx-menu" id="menu-btn"></div>
         <div class="bx bx-search" id="search-btn"></div>
         <%if(session.getAttribute("userinfo")==null){ %>
-        	<a href="/Shopping(jsp)/Member/userinfo_insert.do"><div class="bx bx-user-plus" id="cart-btn"></div></a>
-        	<a href="/Shopping(jsp)/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
+        	<a href="/Member/userinfo_insert.do"><div class="bx bx-user-plus" id="cart-btn"></div></a>
+        	<a href="/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
         <%}else{%>
         	<a href="#"><%=dto.getUsername()%>님</a>&nbsp;
-        	<a href="/Shopping(jsp)/Member/userinfo_insert.do"><div class="bx bx-group" id="cart-btn"></div></a>
-        	<a href="/Shopping(jsp)/Member/userlogout.do"><div class="bx bx-log-out" id="login-btn"></div></a>
+        	<a href="/Member/userinfo_insert.do"><div class="bx bx-group" id="cart-btn"></div></a>
+        	<a href="/Member/userlogout.do"><div class="bx bx-log-out" id="login-btn"></div></a>
         <%}%>
     </div>
 

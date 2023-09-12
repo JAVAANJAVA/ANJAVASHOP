@@ -14,7 +14,7 @@
 <body>
 <!--header section starts-->
 <header class="header">
-    <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 <script>
 	function send(){
 		if(register.userid.value==""){
@@ -118,7 +118,7 @@
 <div class="wrapper">
     <div class="form-box register">
         <h1>Registration</h1>
-        <form name="register" method="post" action="/Shopping(jsp)/Member/userinfo_insert.do" >
+        <form name="register" method="post" action="/Member/userinfo_insert.do" >
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-user' ></i></span>
                 <input name="userid" type="text" placeholder="UserId" value="" required >
@@ -156,7 +156,7 @@
                 <button type="button" class="btn" onclick="send()">Sign up</button>
             <div class="register-link">
             <p>Already have an account?
-                <a href="/Shopping(jsp)/Member/userlogin.do">Login</a>
+                <a href="/Member/userlogin.do">Login</a>
             </p>
 
         </div>

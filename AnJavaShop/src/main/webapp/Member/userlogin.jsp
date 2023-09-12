@@ -48,13 +48,13 @@
 <body>
 <!--header section starts-->
 <header class="header">
-    <a href="/Shopping(jsp)/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
+    <a href="/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
 </header>
 
 <div class="wrapper">
     <div class="form-box login">
         <h1>Login</h1>
-        <form name="login" method="post" action="/Shopping(jsp)/Member/userlogin.do" >
+        <form name="login" method="post" action="/Member/userlogin.do" >
         
             <div class="input-box">
                 <span class="icon"><i class='bx bxs-user' ></i></span>
@@ -72,7 +72,7 @@
                 <button type="button" onclick="send()" class="btn">Login</button>
             <div class="register-link">
             <p>Don't have an account?
-                <a href="/Shopping(jsp)/Member/userinfo_insert.do">Register</a>
+                <a href="/Member/userinfo_insert.do">Register</a>
             </p>
 
         </div>

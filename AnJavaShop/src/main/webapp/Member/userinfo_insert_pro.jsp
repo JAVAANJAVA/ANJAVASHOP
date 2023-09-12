@@ -15,7 +15,7 @@
 %>
 <script>
 	alert("가입 완료");
-	location.href="/Shopping(jsp)/Index/index.jsp";
+	location.href="/Index/index.jsp";
 </script>		
 <%	
 	}else{

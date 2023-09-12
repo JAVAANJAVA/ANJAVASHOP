@@ -15,7 +15,7 @@
 %>
 <script>
 	alert("로그인성공");
-	location.href="/Shopping(jsp)/Index/index.jsp";
+	location.href="/Index/index.jsp";
 </script>
 <%
 	}else if(row==0){
