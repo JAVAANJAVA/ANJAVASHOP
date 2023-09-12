@@ -53,7 +53,7 @@ public class MemberDAO {
 			pstmt.setString(1,userid);		
 			rs = pstmt.executeQuery();
 			
-			if(rs.next()){//아이디가 존재하는 경우
+			if(rs.next()){ //아이디가 존재하는 경우
 				String dbpass = rs.getString("pass");
 				if(dbpass.equals(passwd)){  //아이디 비밀번호가 일치하는 경우
 					row = 1;

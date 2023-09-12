@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class MemberLogout
  */
-@WebServlet("/Shopping(jsp)/Member/userlogout.do")
+@WebServlet("/Member/userlogout.do")
 public class MemberLogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -29,7 +29,7 @@ public class MemberLogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
 		session.invalidate();
-		response.sendRedirect("/Shopping(jsp)/Index/index.jsp");
+		response.sendRedirect("/Index/index.jsp");
 	}
 
 	/**

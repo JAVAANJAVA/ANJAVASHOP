@@ -1,14 +1,14 @@
 package shop.products;
 
 public class ProductsDTO {
-    private int idx;             // 상품번호 (자동입력)
-    private String seller;        // 판매자
-    private String productName;   // 상품이름
-    private String contents;      // 상품설명
-    private double price;         // 상품가격 (소수점 두 자리까지)
-    private String creationDate;    // 작성일자 (기본값: 현재 날짜)
-    private int readcnt;          // 조회수 (기본값: 0)
-    private String filePath;      // 파일 경로
+    private int idx; //상품번호 (자동입력)
+    private String seller; //판매자
+    private String productName; //상품이름
+    private String contents; //상품설명
+    private double price; //상품가격 (소수점 두 자리까지)
+    private String creationDate; //작성일자 (기본값: 현재 날짜)
+    private int readcnt; //조회수 (기본값: 0)
+    private String filePath; //파일 경로
     private String pass;
 	public int getIdx() {
 		return idx;

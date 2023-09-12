@@ -16,7 +16,7 @@ import shop.member.MemberDTO;
 /**
  * Servlet implementation class MemberInsertServlet
  */
-@WebServlet("/Shopping(jsp)/Member/userinfo_insert.do")
+@WebServlet("/Member/userinfo_insert.do")
 public class MemberInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

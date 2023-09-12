@@ -1,17 +1,17 @@
 package shop.askreply;
 
 public class AskreplyDTO {
-	private int idx;             // 고유번호
-	private String pass;         // 비밀번호
-	private String name;         // 작성자 이름
-	private String regdate;        // 작성일자
-	private String subject;      // 제목
-	private String contents;     // 내용
-	private int parent;          // 최상위 부모 글번호
-	private int realparent;      // 바로 한 수준 위의 글번호
-	private int indent;          // 들여쓰기 기준
-	private int depth;           // 답변글의 넘버를 저장하는 필드
-	private int readcnt;         // 조회수
+	private int idx; //고유번호
+	private String pass; //비밀번호
+	private String name; //작성자 이름
+	private String regdate; //작성일자
+	private String subject; //제목
+	private String contents; //내용
+	private int parent; //최상위 부모 글번호
+	private int realparent; //바로 한 수준 위의 글번호
+	private int indent; //들여쓰기 기준
+	private int depth; //답변글의 넘버를 저장하는 필드
+	private int readcnt; //조회수
 	public int getIdx() {
 		return idx;
 	}

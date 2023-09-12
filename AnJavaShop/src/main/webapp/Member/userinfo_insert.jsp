@@ -5,7 +5,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Register</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='register.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
@@ -40,18 +40,12 @@
 			register.repassword.focus();
 			return;
 		}
-		
 		if(register.username.value==""){
 			alert("이름을 입력해주세요");
 			register.username.focus();
 			return;
 		}
 		
-		if(register.zipcode.value==""){
-			alert("우편번호를 입력해주세요");
-			register.zipcode.focus();
-			return;
-		}
 		if(register.address.value==""){
 			alert("주소를 입력해주세요");
 			register.address.focus();
@@ -68,6 +62,7 @@
 		}
 		register.submit();
 	}
+	
 	function checkEngNum(str){
 		lower_str = str.toLowerCase();
 		
@@ -104,14 +99,11 @@
 			}
 		}
 	}
-    function zipcode(){
+    
+	function zipcode(){
 		url="zipcode.jsp"
 		window.open(url,"zipcode","width=410,height=410")
-        }
-		
-	
-	
-	
+	}
 </script>
 </header>
 
