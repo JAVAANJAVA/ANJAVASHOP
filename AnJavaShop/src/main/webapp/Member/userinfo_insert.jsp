@@ -83,13 +83,19 @@
 	}
 
 	function loginIdDupChk(el) {
+		var correctColor = "#009000";
+		var wrongColor = "#ff0000"
+		
 	    let loginIdChkMsg = document.getElementById('loginIdChkMsg');
-
+        
 	    while (loginIdChkMsg.firstChild) {
 	        loginIdChkMsg.removeChild(loginIdChkMsg.firstChild);
 	    }
 
 	    el.value = el.value.trim();
+	    
+	    if (register.userid.value){
+	    	
 
 	    let xhr = new XMLHttpRequest();
 	    xhr.open('GET', 'loginIdDupChk.do?userId=' + el.value, true);
@@ -99,19 +105,26 @@
 	            let data = JSON.parse(xhr.responseText);
 	            if (data.success) {
 	                let message = document.createElement('span');
+	                message.style.color = correctColor;
 	                message.textContent = '해당 아이디는 사용 가능한 아이디입니다.';
 	                loginIdChkMsg.appendChild(message);
 	                validLoginId = document.getElementsByName('userid')[0];
 	            } else {
 	                let message = document.createElement('span');
+	                message.style.color = wrongColor;
 	                message.textContent = '해당 아이디는 중복된 아이디입니다.';
 	                loginIdChkMsg.appendChild(message);
 	                validLoginId = '';
 	            }
 	        }
-	    };
+	    }
 
 	    xhr.send();
+
+	    } else {
+	    	loginIdChkMsg.innerHTML='';
+	    }
+		
 	}
 
 	
@@ -142,11 +155,11 @@
     
 	function zipcode(){
 		url="zipcode.jsp"
-		window.open(url,"zipcode","width=410,height=410")
+		window.open(url,"zipcode","width=400,height=420")
 	}
 </script>
 </header>
-
+	
 <div class="wrapper">
     <div class="form-box register">
         <h1>Registration</h1>

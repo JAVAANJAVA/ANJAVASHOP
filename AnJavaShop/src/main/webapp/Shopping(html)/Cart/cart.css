@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600&display=swap');
+:root{
+    --bule: #0073ff;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline: .1rem solid rgba(0,0,0,.1);
+    --outline-hover: .2rem solid var(--black);
+}
+*{
+    font-family: 'Exo 2', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+body{
+    background: #eee;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: var(--black);
+    background: #fff;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: var(--black);
+    font-size: 12px;
+    text-decoration: none;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid var(--bule);
+    width: 100%;
+    max-width: 350px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+

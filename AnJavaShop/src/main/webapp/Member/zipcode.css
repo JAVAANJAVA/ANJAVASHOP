@@ -25,34 +25,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.87rem 9%;
-    background: #fff;
-    box-shadow: var(--box-shadow);
-}
-.header .logo{
-    font-size: 1.6rem;
-    font-weight: bolder;
-    color: var(--black);
-}
-.header .logo i{
-    color: var(--bule);
 }
 .wrapper{
     position: relative;
     bottom: -40px;
     width: 400px;
-    height: 400px;
+    height: 400px;	
     background: #fff;
     border: 2px solid gray;
     border-radius: 20px;
@@ -64,7 +42,6 @@ body{
 }
 .wrapper .form-box{
     width: 100%;
-    padding: 40px;
 }
 .form-box h1{
     font-size: 36px;
@@ -72,7 +49,6 @@ body{
 }
 .input-box{
     position: relative;
-    bottom: 150px;
     width: 100%;
     height: 50px;
     border-bottom: 2px solid #162938;
@@ -102,31 +78,5 @@ body{
 }
 .input-box .icon :hover{
     color: var(--bule);
-    text-decoration: underline;
-}
-.btn{
-    width: 100%;
-    height: 45px;
-    background: var(--bule);
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    font-size: 1.4rem;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-}
-.register-link{
-    font-size: 0.9rem;
-    color: #162938;
-    font-weight: 500;
-    margin: 25px 0 10px;
-}
-.register-link p a{
-    color: #162938;
-    text-decoration: none;
-    font-weight: 600;
-}
-.register-link p a:hover{
     text-decoration: underline;
 }
