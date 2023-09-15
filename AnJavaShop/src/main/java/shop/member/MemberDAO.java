@@ -119,3 +119,4 @@ public class MemberDAO {
 		return isExists;
 	}
 }
+
