@@ -4,8 +4,8 @@
 <!--home section starts-->
 <section class="home">
     <div class="content">
-         <h4>trade-in-offer</h4>
-         <h2>on-all-products</h2>
+         <h5>trade-in-offer</h5>
+         <h1>on-all-products</h1>
          <p>save more with coupons & up to 70% aff!</p>
          <a href=""><button type="button" class="btn">shop now</button></a>
     </div>

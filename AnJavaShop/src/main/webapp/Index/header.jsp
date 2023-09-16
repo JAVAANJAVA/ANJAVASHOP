@@ -17,41 +17,151 @@
     
 </head>
 <body>
+  <!--메뉴버튼-->
+      
+<div class="side-bar">
+    <header>
+        <div class="close-btn">
+            <i class='bx bx-x'></i>
+        </div>
+    </header>
+    <!--메뉴아이템-->
+    <div class="menu">
+        <div class="item"><a class="sub-btn">브랜드패션
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">패션의류/잡화/뷰티
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">유아동
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">식품/생필품
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">홈데코/취미/반려
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">컴퓨터/디지털/가전
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">스포츠/건강/렌탈
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">자동차/공구
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+        <div class="item"><a class="sub-btn">여행/도서/티켓/쿠폰
+            <i class='bx bxs-chevron-right dropdown'></i>
+        </a>
+        <div class="sub-menu">
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+            <a href="" class="sub-item">Beta</a>
+        </div>
+    </div>
+    </div>
+</div>
 <!--header section starts-->
 
 <header class="header">
     <a href="/Index/index.jsp" class="logo"><i class='bx bxs-shopping-bags'></i>JAVAANJAVA</a>
-    
-    <nav class="navbar">
-        <ul>
-          <li><a href="/Index/index.jsp">shop</a></li>
-          <li><a href="#">categories</a>
-                <ul >
-                    <li><a href="#">beta</a></li>
-                    <li><a href="#">beta</a></li>
-                    <li><a href="#">beta</a></li>
-                </ul>
-        </li>    
-          <li><a href="#">qnA</a>
-                <ul >
-                    <li><a href="#">beta</a></li>
-                    <li><a href="#">beta</a></li>
-                    <li><a href="#">beta</a></li>
-                </ul>
-          </li>
-        </ul>
-    </nav>
+    <div class="menu-btn">
+        <i class='bx bx-menu'></i>
+       </div>
     <div class="icons">
-        <div class="bx bx-menu" id="menu-btn"></div>
-        
-        
+       
         <%if(session.getAttribute("userinfo")==null){ %>
-        	<a href="/Member/userinfo_insert.do"><div class="bx bx-user-plus" id="cart-btn"></div></a>
-        	<a href="/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
-        <%}else{%>
-        	<a href="/Member/userinfo_insert.do"><div class="bx bx-group"></div></a>
+            <a href="/Member/userlogin.do"><div class="bx bx-log-in" id="login-btn"></div></a>
+        	<a href="/Member/userinfo_insert.do"><div class="bx bx-user" id="cart-btn"></div></a>
         	<a href="/Cart/cart.jsp"><div class="bx bx-cart" id="cart-btn"></div></a>
-        	<a href="/Member/userlogout.do"><div class="bx bx-log-out" id="login-btn"></div></a>
+        <%}else{%>
+            <a href="/Member/userlogout.do"><div class="bx bx-log-out" id="login-btn"></div></a>
+        	<a href="/Member/userinfo_insert.do"><div class="bx bx-user"></div></a>
+        	<a href="/Cart/cart.jsp"><div class="bx bx-cart" id="cart-btn"></div></a>
         	
         <%}%>
     </div>

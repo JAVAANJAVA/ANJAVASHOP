@@ -30,12 +30,88 @@ html{
 body{
     background: #eee;
 }
+.side-bar{
+    background: #fff;
+    width: 250px;
+    left: -250px;
+    height: 100vh;
+    position: fixed;
+    border-radius: 5px;
+    top: 0;
+    overflow-y: auto;
+    transition: .6s ease;
+    transition-property: left;
+    z-index: 1001;
+}
+.close-btn{
+    position: absolute;
+    color: var(--black);
+    font-size: 23px;
+    right: 0px;
+    margin: 10px;
+    cursor: pointer;
+}
+.close-btn:hover{
+	color: var(--bule)
+}
+.menu{
+    width: 100%;
+    margin-top: 30px;
+}
+.menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.menu .item a{
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+.menu .item a:hover{
+	text-decoration: underline;
+	color: var(--bule)
+}
+
+.item i{
+    margin-right: 15px;
+}
+.item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: .3s ease;
+}
+.item .sub-menu{
+    background: #eee;
+    display: none;
+}
+.menu-btn{
+    position: absolute;
+    color: var(--black);
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1000;
+    left: 0;
+}
+.side-bar.active{
+    left: 0;
+}
+.item .sub-menu a{
+    padding-left: 80px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
 .header{
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +120,8 @@ body{
     box-shadow: var(--box-shadow);
 }
 .header .logo{
+    position: relative;
+    right: -50px;
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--black);
@@ -52,53 +130,7 @@ body{
 .header .logo i{
     color: var(--bule);
 }
-.header .navbar ul{
-    list-style: none;
-}
-.navbar ul li{
-    float: left;
-    position: relative;
-    width: auto;
-}
-.navbar ul li ul{
-    position: absolute;
-    left: -5px;
-    display: none;
-    background-color: #fff;
-    border-radius: 5px 5px;
-}
-.navbar ul li:hover ul{
-    display: block;
-    width: 135px;
-}
-.navbar ul li ul li{
-    line-height: 1;
-    width: 135px;
-    border-radius: 5px;
-    padding: 6px;
-}
-.navbar ul li:hover:last-child ul li{
-    display: block;
-    width: 100px;
-}
-.navbar ul li:last-child ul {
-	width: 100px;
-}
 
-.navbar li a{
-    text-decoration: none;
-    display: block;
-    justify-content: space-between;
-    font-size: 1.7rem;
-    color: var(--black);
-    padding: 15px 20px;
-    transition: .1s;
-}
-.navbar li a:hover{
-    background: var(--bule);
-    border-radius: 6px;   
-    color: #fff;   
-}
 .header .icons div{
     display: grid;
     float: left;
@@ -117,15 +149,6 @@ body{
     background: var(--bule);
     color: #fff;
 }
-
-#menu-btn{
-    display: none;
-
-}
-.header .navbar.active{
-    right: 2rem;
-    transition: .4s linear;
-}
 /*
  position: absolute;
     top: 2.4rem;
@@ -141,7 +164,7 @@ body{
 */
 .header .search-form{
     position: absolute;
-    left: 31%;
+    left: 33%;
     width: 40%;
     height: 4rem;
     background: #fff;
@@ -151,6 +174,7 @@ body{
     justify-content: center;
     align-items: center;
     box-shadow: var(--box-shadow);
+    
 }
 
 .header .search-form input{
@@ -194,12 +218,13 @@ body{
 	margin-top: 1rem;
 	padding: 1rem 3rem;	
 	align-items: center;
-	cursor: pointer;
+    cursor: pointer;
 }
-.btn:hover{
+.home .content .btn:hover{
     background: var(--bule);
     color: #fff;
 }
+
 
 
 
@@ -277,25 +302,4 @@ body{
     }
 }
 /*@media(max-width:991px){*/
-    #menu-btn{
-        display: block;
-    }
-    .header .navbar{
-        position: absolute;
-        top: 110%;
-        right: -110%;
-        width: 30rem;
-        box-shadow: var(--box-shadow);
-        border-radius: .5rem;
-        background: #fff;
-    }
-    .header .navbar a{
-        
-        display: block;
-    }
-/*}*/
-@media(max-width:450px){
-    html{
-        font-size: 50%;
-    }
-}
+
